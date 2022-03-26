@@ -24,8 +24,7 @@ $data = $model->edit($id);
  <br>
  <label>Nama</label>
  <br>
- <input type="text" name="nama" value="<?php echo $data-
->nama ?>">
+ <input type="text" name="nama" value="<?php echo $data->nama ?>">
     <br>
     <label>UTS</label>
     <br>
@@ -33,8 +32,7 @@ $data = $model->edit($id);
     <br>
     <label>Tugas</label>
     <br>
-    <input type="text" name="tugas" value="<?php echo $data-
->tugas ?>">
+    <input type="text" name="tugas" value="<?php echo $data->tugas ?>">
     <br>
     <label>UAS</label>
     <br>
