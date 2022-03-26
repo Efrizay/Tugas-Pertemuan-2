@@ -17,7 +17,7 @@ $data = $model->edit($id);
  <h1>Edit Nilai Mahasiswa</h1>
  <a href="index.php">Kembali</a>
  <br><br>
- <form action="prcess.php" method="post">
+ <form action="process.php" method="post">
  <label>NIM</label>
  <br>
  <input type="text" name="nim" value="<?php echo $data->nim ?>">
