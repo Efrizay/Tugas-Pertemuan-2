@@ -17,13 +17,13 @@
 	</div>
 	
 </body>
-	<!-- Asset -->
+
 	<script src="asset/vendor/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 	<script src="asset/vendor/bootstrap-4.5.3/js/bootstrap.min.js"></script>
 	<script src="asset/vendor/datatables-b4/datatables.min.js"></script>
 	<script src="asset/js/demo.js"></script>
 	<script src="asset/js/main.js"></script>
-	<!-- Mengambil data dari data paket -->
+
 	<script type="text/javascript">
 		$(document).on('click', '.pilih-paket', function (e) {
 			document.getElementById("kd_paket").value = $(this).attr('data-kdpaket');
@@ -34,7 +34,7 @@
 			$('#dataTables').dataTable();
 		});
 	</script>
-	<!-- Mengambil data dari data konsumen -->
+	
 	<script type="text/javascript">
 		$(document).on('click', '.pilih-pelanggan', function (e) {
 			document.getElementById("id_pelanggan").value = $(this).attr('data-pelanggan');
@@ -44,7 +44,7 @@
 			$('#dataTables').dataTable();
 		});
 	</script>
-	<!-- Menghitung dan menampilkan otomatis Biaya (harga * qty)-->
+	
 	<script>
 		function jumlahBiaya() {
 			var harga = document.getElementById('harga').value;
@@ -55,7 +55,7 @@
 			}
 		}
 	</script>
-	<!-- Menghitung dan menampilkan otomatis Kembalian (bayar - biaya)-->
+
 	<script>
 		function jumlahKembalian() {
 			var bayar = document.getElementById('bayar').value;
