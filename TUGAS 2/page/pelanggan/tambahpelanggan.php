@@ -1,5 +1,5 @@
 <?php 
-	// Id otomatis
+
 	$autoId = autoId('tbl_pelanggan', 'PLG');
 
 	if( isset($_POST['submit'])) {
@@ -23,8 +23,6 @@
 	}
 ?>
 
-
-<!-- START: Content -->
 <div class="container">
 
 	<div class="card mt-4 mb-4">
@@ -71,4 +69,3 @@
 	</div>
 
 </div>
-<!-- END: Content -->
