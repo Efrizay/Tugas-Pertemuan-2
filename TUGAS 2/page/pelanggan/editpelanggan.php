@@ -1,14 +1,12 @@
 <?php 
-	// Jika tidak ada ID di URL
+
 	if (!isset($_GET['id'])) {
 		header("Location: ?page=Pelanggan");
 		exit;
 	}
 
-	// Ambil ID dari URL
 	$id = $_GET['id'];
 
-	// Ambil semua data pelanggan berdasarkan ID
 	$data = viewData("SELECT * FROM tbl_pelanggan WHERE id = '$id'");
 
 	if( isset($_POST['submit'])) {
@@ -37,7 +35,6 @@
 ?>
 
 
-<!-- START: Content -->
 <div class="container container-fluid">
 
 	<div class="card mt-4 mb-4">
@@ -85,4 +82,3 @@
 	</div>
 
 </div>
-<!-- END: Content -->
