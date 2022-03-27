@@ -1,6 +1,6 @@
 <?php 
   session_start(); 
-  // Menyisipkan Connection dan Function
+  
   require 'load/config.php';
   require 'load/function.php';
 ?>
@@ -13,7 +13,7 @@
 ?>
 
 
-<!-- START: Document -->
+
 <?php require_once 'header.php'; ?>
 
 <?php require 'content.php'; ?>
