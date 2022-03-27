@@ -9,10 +9,10 @@
 						LIMIT 5"
 ?>
 
-<!-- Awal Isi Halaman -->
+
 <div class="container container-fluid">
 
-	<!-- START: Category -->
+
 	<div class="card mt-4 mb-4">
 		<div class="card-body">
 			<h5 class="card-title">Dashboard</h5>
@@ -69,9 +69,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- END: Category -->
 
-	<!-- START: Data Transaksi Terakhir -->
+
 	<div class="card mb-4">
 		<div class="card-body">
 			<h5 class="card-title">Riwayat Transaksi Terakhir</h5>
@@ -112,6 +111,6 @@
 			</table>
 		</div>
 	</div>
-	<!-- END: Data Transaksi Terakhir -->
+
 
 </div>
