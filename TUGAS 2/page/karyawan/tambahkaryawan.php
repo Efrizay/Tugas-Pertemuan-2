@@ -10,13 +10,11 @@
 		$catatan       		= addslashes($_POST['catatan']);
 		$role							= "Karyawan";
 
-    // Upload image
     $image = uploadImage('upload/karyawan');
     if ( !$image ) {
       return false;
     }
 
-    // Cek username
     $result = mysqli_query($koneksi, "SELECT username FROM tbl_karyawan WHERE username = '$username'");
     if ( mysqli_fetch_assoc($result) ) {
       echo "
@@ -27,7 +25,6 @@
       return false;
     }
 
-    // Konfirmasi password
     if ( $password !== $repeat_password ) {
       echo "
 				<script>
@@ -39,7 +36,6 @@
 		// Enskripsi password	
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Menambahkan user
 		$query 	= "INSERT INTO tbl_karyawan VALUES ( NULL, '$nama', '$username', '$password', '$email', '$nohp', '$alamat', '$catatan', '$image', '$role')";
 
 		if( queryData($query) > 0){
@@ -59,7 +55,6 @@
 ?>
 
 
-<!-- START: Content -->
 <div class="container">
 
 	<div class="card mt-4 mb-4">
@@ -137,4 +132,3 @@
 	</div>
 
 </div>
-<!-- END: Content -->
