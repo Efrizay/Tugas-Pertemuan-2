@@ -1,11 +1,10 @@
 <?php 
-  // Jika tidak ada ID di URL
+
   if (!isset($_GET['id'])) {
     header("Location: ?page=Paket");
     exit;
   }
 
-  // Mengambil ID dari URL
   $id = $_GET['id'];
 
   if (deleteData('tbl_paket', $id) > 0) {
