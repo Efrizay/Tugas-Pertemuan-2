@@ -1,14 +1,13 @@
 <?php
-	// Jika tidak ada ID di URL
+	
 	if (!isset($_GET['id'])) {
 		header("Location: ?page=Karyawan");
 		exit;
 	}
 
-	// Ambil ID dari URL
 	$id = $_GET['id'];
 
-	// Ambil semua data karyawan berdasarkan ID
+
 	$data = viewData("SELECT * FROM tbl_karyawan WHERE id = '$id'");
 
 	if( isset($_POST['submit'])) {
@@ -24,7 +23,6 @@
 		$oldimage 				= $_POST['oldimage'];
 		$role							= "Karyawan";
 
-    // Cek username
 		$result = mysqli_query($koneksi, "SELECT username FROM tbl_karyawan WHERE username = '$username'");
 		$resultId = mysqli_query($koneksi, "SELECT * FROM tbl_karyawan WHERE id = $id AND username = '$username'");
 
@@ -75,7 +73,6 @@
 ?>
 
 
-<!-- START: Content -->
 <div class="container">
 
 	<div class="card mt-4 mb-4">
@@ -148,4 +145,3 @@
 	</div>
 
 </div>
-<!-- END: Content -->
