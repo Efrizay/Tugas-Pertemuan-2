@@ -99,7 +99,7 @@
       </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit" name="login">Sign in</button>
-    <p class="mt-5 mb-3 text-muted text-center">© Rizky Aidil - 2020</p>
+    <p class="mt-5 mb-3 text-muted text-center">Efriza Yunardi - 2022</p>
   </form>
 
 </body>
