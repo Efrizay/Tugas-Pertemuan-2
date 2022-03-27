@@ -117,6 +117,14 @@
       return false;
     }
 
+    if ($fileSize > 3048000) {
+        echo "
+        <script>
+          alert('Image size is more than 3 MB !!!');
+        </script>
+        ";
+        return false;
+
     $fileNewName = rand(0,999).$_FILES['image']['name'];
 
     $uploadDir = "./$uploadLocation/";
