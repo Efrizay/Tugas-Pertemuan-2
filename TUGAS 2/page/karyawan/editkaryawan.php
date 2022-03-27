@@ -37,7 +37,7 @@
       return false;
     }
 
-    //Cek Apakah User Pilih Gambar Baru
+   
     if ( $_FILES['image']['error'] === 4 ) {
       $image = $oldimage;
     } else {
@@ -110,7 +110,7 @@
 									// Get loaded data and render thumbnail.
 									document.getElementById("imagePreview").src = e.target.result;
 								};
-								// Read the image file as a data URL.
+								
 								reader.readAsDataURL(this.files[0]);
 							};
 						</script>
