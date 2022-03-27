@@ -5,8 +5,7 @@
   if ( isset($_COOKIE['laundry']) && isset($_COOKIE['ku']) ) {
     $laundry = $_COOKIE['laundry'];     // id dari tbl_karyawan
     $ku = $_COOKIE['ku'];               // username dari tbl_karyawan
-    
-    // Ambil username berdasarkan id
+  
     $result = mysqli_query($koneksi, "SELECT * FROM tbl_karyawan WHERE id = '$laundry'");
     $data = mysqli_fetch_assoc($result);
 
@@ -27,17 +26,17 @@
 
     $resultUsername = mysqli_query($koneksi, "SELECT * FROM tbl_karyawan WHERE username = '$username'");
 
-    // Cek user
+  
     if ( mysqli_num_rows($resultUsername)  === 1 ) {
       // Cek password
       $result = mysqli_fetch_assoc($resultUsername);
       if ( password_verify($password, $result['password']) ) {
         
-        // Set session
+ 
         $_SESSION['login'] = true;
         $_SESSION['id'] = $result['id'];
         
-        // Cek remember me
+   
         if ( isset($_POST['remember']) ) {
           setcookie('laundry', $result['id'], time() + (60 * 60 * 24 * 5));                       // id dari tbl_karyawan
           setcookie('ku', hash('sha256', $result['username']), time() + (60 * 60 * 24 * 5));      // username dari tbl_karyawan
@@ -62,7 +61,6 @@
 
 	<link rel="shortcut icon" href="asset/img/favicon.png" type="image/x-icon">
 
-  <!-- Boostrap 4 -->
   <link rel="stylesheet" href="asset/vendor/bootstrap-4.5.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="asset/css/login.css">
   <!-- Font Awesome -->
