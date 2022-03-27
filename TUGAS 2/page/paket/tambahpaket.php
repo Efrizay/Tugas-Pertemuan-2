@@ -1,5 +1,5 @@
 <?php 
-	// ID otomatis
+
 	$autoId = autoId('tbl_paket', 'PKT');;
 
 	if( isset($_POST['submit'])) {
@@ -24,7 +24,6 @@
 ?>
 
 
-<!-- START: Content -->
 <div class="container container-fluid">
 
 	<div class="card mt-4 mb-4">
@@ -73,4 +72,3 @@
 	</div>
 
 </div>
-<!-- END: Content -->
